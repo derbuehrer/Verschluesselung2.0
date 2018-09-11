@@ -22,7 +22,8 @@ public class Benutzeroberflaeche {
     private JButton newPW;
     private JTextArea textArea;
     private JButton zwischenablage;
-    private boolean pwgesetzt = false;      // Prüfen ob ein Passwort gesetzt istD+v%/7iGkhD| g4!L[A3]}€dÜ
+    private boolean pwgesetzt = false;      // Prüfen ob ein Passwort gesetzt ist
+    private String text = "";
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Verschlüsselung");
@@ -41,9 +42,9 @@ public class Benutzeroberflaeche {
             public void actionPerformed(ActionEvent e) {
                 // Kontrolle ob ein Passwort eingegeben wurde
                 if (pwgesetzt) {
-
+                    text = textArea.getText();
                     // Prüfen ob entschlüsselt werden kann
-                    if (textArea.getText().equals("") || textArea.getText().equals(" ")) {
+                    if (text.equals(" ")) {
                         JOptionPane.showMessageDialog(null, "Es gibt nichts zum entschlüsseln!");
                         return;
                     }
@@ -70,9 +71,9 @@ public class Benutzeroberflaeche {
             public void actionPerformed(ActionEvent e) {
                 // Kontrolle ob ein Passwort eingegeben wurde
                 if (pwgesetzt) {
-
+                    text = textArea.getText();
                     // Prüfen ob verschlüsselt werden kann
-                    if (textArea.getText().equals("")) {
+                    if (text.equals("")) {
                         JOptionPane.showMessageDialog(null, "Es gibt nichts zum verschlüsseln");
                         return;
                     }

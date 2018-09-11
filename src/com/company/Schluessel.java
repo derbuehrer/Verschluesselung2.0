@@ -31,12 +31,6 @@ public class Schluessel {
         key = sha.digest(key);
         key = Arrays.copyOf(key, 16);
         seckey = new SecretKeySpec(key, "AES");
-
-        /* File keyfile = new File(".keyfile.txt");
-
-        OutputStream outputStream = new ObjectOutputStream(new FileOutputStream(keyfile));
-        ((ObjectOutputStream) outputStream).writeObject(seckey);
-        outputStream.close(); */
     }
 
     // Entschlüssleung des Textes mithilfe des Keys
@@ -59,7 +53,7 @@ public class Schluessel {
         catch (BadPaddingException e) {
             JOptionPane.showMessageDialog(null, "Konnte nicht entschlüsselt werden!(Vielleicht stimmt der Schlüssel oder die Eingabe nicht?)");
         } catch (IllegalBlockSizeException e) {
-            JOptionPane.showMessageDialog(null,"Der Text ist bereits entschlüsselt");
+            JOptionPane.showMessageDialog(null,"Der Text ist bereits entschlüsselt oder kann nicht entschlüsselt werden!");
         }
     }
 
