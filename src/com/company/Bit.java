@@ -6,17 +6,17 @@ public class Bit {
 
     public static int bitStraerke() {
         int bit = JOptionPane.showOptionDialog(null,"Wähle bitte aus wie stark die Bittiefe sein soll " +
-                        "\n(Da die NSA AES-256Bit knacken will gibts für hardcore Enthustiasten extra 512Bit und sogar 1024Bit)", "Auswahl",
-                JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, new String[]{"256Bit", "512Bit", "1024Bit"},"256Bit");
+                        "\n(Ein sicheres Passwort ist ab 256Bit sinnvoller als die Bittiefe)", "Auswahl",
+                JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, new String[]{"128Bit", "256Bit", "512Bit"},"256Bit");
         switch (bit) {
             case 0:
-                bit = 256;
+                bit = 128;
                 break;
             case 1:
-                bit = 512;
+                bit = 256;
                 break;
             case 2:
-                bit = 1024;
+                bit = 512;
                 break;
             default:
                 bit = 256;
