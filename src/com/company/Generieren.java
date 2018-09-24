@@ -13,7 +13,7 @@ public class Generieren {
         String passw = "";
 
         // Generierung des Passwortes
-        for (int i = 1; i <= Math.random() * 40 + 25; i++) {
+        for (int i = 1; i <= Math.random() * 55 + 30; i++) {
             passw += charset.charAt((int) Math.floor(Math.random() * charset.length()));
         }
         // Ausgabe des Passwortes sowie Speicherung dessen
